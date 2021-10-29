@@ -6,7 +6,7 @@
         <title>Gaban - Gajah Ganesha</title>
     
     {% endblock title %}
-    {% include "../snippets/head.html" %}
+    {% include "../snippets/general/head.html" %}
     {% comment %} more head {% endcomment %}
     
     {% block head %}
@@ -18,7 +18,7 @@
     <body>
         {% comment %} header & dropdown {% endcomment %}
         {% block header %}
-            {% include "snippets/header.html" %}
+            {% include "snippets/general/header.html" %}
         {% endblock header %}
 
         {% block sebelumContenUtama %}
@@ -51,4 +51,4 @@
         
     </body>
 </main>
-{%include "../snippets/footer.html" %}
+{%include "../snippets/general/footer.html" %}
