@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<head>
+    {% comment %} title {% endcomment %}
+    {% block title %}
+        <title>Gaban - Gajah Ganesha</title>
+    
+    {% endblock title %}
+    {% include "../snippets/head.html" %}
+    {% comment %} more head {% endcomment %}
+    
+    {% block head %}
+        
+    {% endblock  %}
+   
+</head>
+<main>
+    <body>
+        {% comment %} header & dropdown {% endcomment %}
+        {% block header %}
+            {% include "snippets/header.html" %}
+        {% endblock header %}
+
+        {% block sebelumContenUtama %}
+        {% endblock sebelumContenUtama %}
+
+        <div class="contentUtama">
+        {% comment %} contenUtama {% endcomment %}
+            {% block contenUtama %}
+                
+            {% endblock contenUtama %}
+        </div>
+
+        {% block setelahContenUtama %}
+        {% endblock setelahContenUtama %}
+        
+
+        {% comment %} about {% endcomment %}
+        {% block about %}
+            
+        {% endblock about %}
+        {% block dom_umum %}
+           
+        
+        {% endblock dom_umum %}
+
+       
+        {% block script %}
+
+        {% endblock script %}
+        
+    </body>
+</main>
+{%include "../snippets/footer.html" %}

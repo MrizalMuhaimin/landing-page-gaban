@@ -1,0 +1,54 @@
+.logo-sejarah{
+    margin-top: -60px;
+    margin-left: -124px;
+    display:flex;
+    height: 362px;
+    width:100%;
+    padding-left: 149px;
+    padding-right: 149px;
+    background: radial-gradient(165.87% 692.11% at 94.27% 127.51%, #E4FFFF 0%, #F5F6F6 100%);
+    margin-bottom: 148px;
+    
+}
+
+.logo{
+    position: relative;
+    width:35%;
+    padding-right: 100px;
+}
+
+.logo img{
+    position: relative;
+    margin-top: 52px;
+    margin-left: 100px;
+    height: 410px;
+    width: 480px;
+
+
+}
+
+.sejarah{
+    margin-left: 675px;
+    margin-top: 140px;
+    position: absolute;
+    width:45%;
+}
+
+.sejarah h2{
+    color: #18807F;
+    padding: 20px 0;
+    font-family: 'Mukta';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 53px;
+}
+
+.sejarah p{
+    font-size: 18px;
+    line-height: 30px;
+    /* Dark Grey */
+    color: #494B4D;
+
+}
+

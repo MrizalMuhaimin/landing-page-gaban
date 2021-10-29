@@ -1,0 +1,27 @@
+.profil-vidio{
+    display: flex;
+    width: 100%;
+    padding-left: 149px;
+    padding-right: 149px;
+    padding-top: 64px;
+    align-items: center;
+}
+
+.profil-vidio iframe{
+    width: 396.74px;
+    height: 235px;
+    border-radius: 10px;
+
+}
+
+.profil-vidio p{
+    align-items: center;
+    padding-left: 45px;
+    font-size: 18px;
+    line-height: 30px;
+    width: 705px;
+
+    /* Dark Grey */
+
+    color: #494B4D;
+}

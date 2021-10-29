@@ -1,0 +1,29 @@
+.title-sponsor h2{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 53px;
+
+    /* Green */
+
+    color: #18807F;
+    width:100%;
+    text-align: center;
+    margin-top: 55px;
+    margin-bottom: 53px;
+}
+.slick-center{
+    transform: scale(1) !important;
+    transition: .3s ease;
+}
+.slick-slide{
+    transform: scale(0.8);
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.slider_items img{
+    width: 598px;
+    height: 444px;
+    border-radius: 15px;
+}

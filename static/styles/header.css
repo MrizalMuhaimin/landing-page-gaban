@@ -1,0 +1,42 @@
+
+.header{
+    display: flex;
+    width: 100%;
+   
+    justify-content: space-between;
+    color: #494B4D;
+    height: 60px;
+    align-items: center;
+}
+
+.header > div{
+    display: flex;
+    width: 300px;
+    justify-content: space-between;
+
+}
+.header > div > div > p{
+    /* border-bottom: 3px solid transparent; */
+    background: linear-gradient(#494B4D, #494B4D) center 1.5em no-repeat;
+    background-size: 5% 3px;
+    align-items: center;
+    transition: .3s ease;
+}
+.header > div > div:hover p{
+    /* border-bottom: 3px solid black; */
+    background-size: 105% 3px;
+    /* transition: width 0.2s; */
+    position: relative;
+    cursor: pointer;
+
+}
+
+.header-logo{
+    width: 39px;
+    height: 33px;
+}
+
+.header p{
+    font-weight: 500;
+    font-size: 18px
+}

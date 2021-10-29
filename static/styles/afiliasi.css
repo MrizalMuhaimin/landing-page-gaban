@@ -1,0 +1,61 @@
+.afiliasi {
+    margin-top: 75px;
+    margin-bottom: 100px;
+    width: 100%;
+    padding-left: 149px;
+    padding-right: 149px;
+}
+.afiliasi h2{
+    /* Heading 2 */
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 53px;
+    text-align: center;
+
+    /* Green */
+
+    color: #18807F;
+}
+.logo-afiliasi{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.logo-afiliasi > div{
+    align-self: baseline;
+}
+
+.logo-afiliasi img{
+    margin-bottom: 20px;
+}
+
+.logo-ukawangi{
+    width: 141px;
+    height: 200px;
+
+}
+
+.logo-KPMBB{
+    height: 203px;
+    left: 607px;
+
+}
+
+.logo-Tel-U{
+    width: 134px;
+    height: 134px;
+
+}
+
+.logo-afiliasi p{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 31px;
+    text-align: center;
+
+    /* Dark Grey */
+
+    color: #494B4D;
+}

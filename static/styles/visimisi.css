@@ -1,0 +1,42 @@
+.visi-misi{
+    display:flex;
+    width:100%;
+    padding-left: 149px;
+    padding-right: 149px;
+    margin-top: 150px;
+}
+
+.visi-misi ol {
+    padding-left:30px;
+
+}
+
+.visi li , .misi li {
+    font-size: 18px;
+    line-height: 30px;
+
+    /* Dark Grey */
+
+    color: #494B4D;
+
+}
+.visi h2, .misi h2{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 53px;
+    color: #18807F;
+  
+}
+
+
+
+.visi {
+    width: 35%;
+    padding-right: 70px;
+}
+
+.misi {
+    width: 60%;
+}
+

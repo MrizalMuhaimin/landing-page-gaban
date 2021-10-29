@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Mukta', sans-serif;
+    
+ }
+
+.header-tagline{
+    padding-left: 149px;
+    padding-right: 149px;
+    height: 781px;
+    background: radial-gradient(165.87% 692.11% at 94.27% 127.51%, #E4FFFF 0%, #F5F6F6 100%);
+}
+
+.garis-bawah{
+    border-bottom: 3px solid #F5F6F6;
+}
