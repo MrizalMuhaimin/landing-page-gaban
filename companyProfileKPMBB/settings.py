@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-)-to$v!aus!o5*!$qmf^(6tiv(k(^tm0x(94q(@kxnamz=2=oe
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://landing-page-kpmbb.herokuapp.com']
 
 
 # Application definition
