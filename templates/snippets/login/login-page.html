@@ -1,0 +1,31 @@
+{% load static %}
+<div class="login-page">
+    <div class="login-left">
+        <img src="{% static 'login/assets/login-picture.png' %}">
+    </div>
+    <div class="login-right">
+        <div class="header-logo">
+            <img src="{% static 'general/assets/LogoGaban1.png' %}">
+            <h3>Gajah Banyuwangi</h3>
+        </div>
+        <h3>Login</h3>
+        <p>Welcome back !  Please login to<br> your account</p>
+        <form action="">
+            <label for="fname">Email address</label><br>
+            <input type="text" id="lemail" name="lemail" placeholder="Email"><br>
+            <label for="lname">Password</label><br>
+            <input type="password" id="lpassword" name="lpassword" placeholder="Password"><br>
+            
+            <label class="container-chekbox" for="keeplogin"> Keep me logged in
+                <input type="checkbox" id="keeplogin" name="keeplogin" value="1">
+                <span class="checkmark"></span>
+            </label><br>
+            <input type="submit" value="Login Account"><br>
+            <div>
+                <a href="">Forgot your password?</a>
+            <div>
+
+        </form>
+
+    </div>
+</div>

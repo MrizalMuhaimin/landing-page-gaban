@@ -19,3 +19,15 @@
 .garis-bawah{
     border-bottom: 3px solid #F5F6F6;
 }
+
+a{
+    text-decoration: none;
+    color: #18807F;
+    text-align: center;
+    width: 100%;
+}
+
+a:hover{
+    text-decoration: underline;
+    color: #18807F;
+}

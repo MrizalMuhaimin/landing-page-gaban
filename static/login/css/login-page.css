@@ -1,0 +1,142 @@
+.login-page{
+    display: flex;
+    height: 100vh;
+}
+.login-left {
+    background-color: #E6FEFE;
+    display: flex;
+    justify-content:left;
+    width: 60%;
+    padding: 0 50px;
+    text-align: center;
+}
+.login-left img{
+    position: relative;
+    align-self: center;
+    margin-top: auto;
+    bottom: 0px;
+
+}
+
+.login-right{
+    background-color: white;
+    height: 100%;
+    width: 40%;
+    padding: 30px 45px;
+}
+
+.header-logo{
+    width: 100%;
+    color: #1A8685;
+    display:flex;
+    margin-top: 10px;
+    margin-bottom: 75px;
+}
+
+.header-logo img{
+    width: 39px;
+    margin-right: 12px;
+}
+.header-logo h3{
+    font-size: 24px !important;
+    line-height: 40px;
+    align-self: center;
+}
+
+.login-right h3{
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 60px;
+    /* identical to box height */
+    /* Green */
+
+    color: #18807F;
+}
+
+.login-right p{
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 30px;
+
+    /* Dark Grey */
+
+    color: #494B4D;
+}
+form{
+    margin-top:10px;
+    width: 100%;
+   
+}
+form label{
+    font-size: 18px;
+    line-height: 30px;
+    /* identical to box height */
+    /* Light Green */
+
+    color: #20ABAA;
+    margin-top: 15px;
+}
+
+form label[for="keeplogin"]{
+    font-size: 13px;
+    line-height: 22px;
+    /* identical to box height */
+    /* Green */
+    color: #18807F;
+    /* Inside Auto Layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 0px 8px;
+}
+
+input[type="text"],input[type="password"]{
+    width: 349px;
+    height: 35px;
+    background: #F5F6F6;
+    border: 1px solid #e0dddd;
+    border-radius: 5px;
+    padding: 5px 15px;
+    margin-bottom: 15px;
+    outline: none;
+}
+input[type="text"]:hover,input[type="password"]:hover{
+    border: 1px solid #20ABAA;
+}
+
+input[type="text"]:focus,input[type="password"]:focus{
+    border: 2px solid #20ABAA;
+}
+
+
+
+input[type='submit']{
+    width: 350px;
+    height: 37px;
+    background: #20ABAA;
+    border-radius: 5px;
+    border: 1px solid #b4b4b4;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+input[type='submit']:hover{
+    background:#18807f;
+    transition: .3s ease;
+
+}
+
+form div{
+    max-width: 350px !important;
+    display: flex;
+    justify-content: center;
+
+}
+
+form a{
+    font-weight: 590;
+    font-size: 13px;
+    line-height: 22px;
+   
+}
