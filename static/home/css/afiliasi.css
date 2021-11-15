@@ -87,4 +87,13 @@
         width: 100px;
         height: 100px;
     }
+    .afiliasi h2{
+        font-size: 18px;
+    }
+}
+
+@media (max-width:600px){
+    .logo-afiliasi p {
+        font-size: 18px;
+    }
 }

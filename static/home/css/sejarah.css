@@ -87,4 +87,45 @@
         margin-left: 250px;
         margin-top: 100px;
     }
+
+    .sejarah h2{
+        font-size: 26px;
+    }
+}
+
+@media (max-width:700px){
+    .logo img{
+        width: 100px;
+        height: auto;
+    }
+    .sejarah{
+        width: 65%;
+        margin-left: 180px;
+        margin-top: 100px;
+    }
+
+}
+
+@media (max-width: 600px){
+    .logo img{
+    position: absolute;
+    z-index: -1;
+    }
+}
+
+@media (max-width: 550px){
+    .logo{
+    position: absolute;
+    z-index: 2;
+    right: 50px;
+    }
+    .sejarah{
+        width: 100%;
+        margin-left: 0;
+        padding-left: 50px;
+        padding-right: 50px;
+
+        
+    
+    }
 }

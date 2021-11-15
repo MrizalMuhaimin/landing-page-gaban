@@ -109,8 +109,49 @@ footer .right > div{
         height: 20px;
         padding-right: 10px;
     }
-    .footer h2{
-        font-size: 18px;
-        line-height: 30px;
+    footer .right > div{
+        max-width: 45%;
+    }
+    footer .right .menu {
+        max-width: 30%;
+    }   
+}
+@media(max-width: 700px){
+    footer p{
+        font-size: 14px;
+        line-height: 35px;
+    }
+    .footer-logo{
+        Width : 130px;
+        Height :auto;
+    }
+}
+@media (max-width: 650px){
+    footer{
+        display: block;
+    }
+    footer .left{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    footer .right{
+        justify-content:space-between;
+        margin-top: 30px;
+    }
+    .footer-logo{
+        min-width: 35%;
+       
+    }
+    .media-sosial{
+        min-width: 40%;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    footer .right > div{
+        min-width: 60%;
+    }
+    footer .right .menu {
+        min-width: 35%;
     }
 }

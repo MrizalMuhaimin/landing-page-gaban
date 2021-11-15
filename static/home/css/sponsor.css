@@ -33,15 +33,21 @@
     .slider_items img{
         width: 398px;
         height: 300px;
-        object-fit: cover;
     }
 
 }
 
 @media (max-width: 800px){
     .slider_items img{
-        width: 400px;
-        height:min-content;
+        width: 350px;
+    }
+
+}
+
+@media (max-width:600px){
+    .slider_items img{
+        width: 300px;
+        
     }
 
 }

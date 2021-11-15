@@ -82,6 +82,14 @@
         width: 300px;
     }
     .tagline-text > p{
+        position: absolute;
+        max-width: 50%;
+        left: 80px;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;  
+        overflow: hidden;
+        z-index: 2;
         font-size: 65px;
         line-height: 80px;
     }
@@ -97,9 +105,14 @@
         width: 300px;
     }
     .tagline-text > p{
+        left: 50px;
         font-size: 35px;
         line-height: 50px;
     }
-    
+}
 
+@media(max-width:600px){
+    .tagline img{
+        width: 200px;
+    }
 }

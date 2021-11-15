@@ -64,5 +64,11 @@
         width: 100%;
         padding-right: 0;
     }
+    .visi h2, .misi h2 {
+        font-size: 26px;
+    }
+    .title-sponsor h2 {
+        font-size: 26px;
+    }
 }
 
