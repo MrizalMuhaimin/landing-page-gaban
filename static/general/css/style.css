@@ -9,7 +9,9 @@
     
  }
 
+
 .header-tagline{
+    width: 100%;
     padding-left: 149px;
     padding-right: 149px;
     height: 781px;
@@ -30,4 +32,22 @@ a{
 a:hover{
     text-decoration: underline;
     color: #18807F;
+}
+
+@media (max-width: 1000px) {
+    .header-tagline{
+        padding-left: 80px;
+        padding-right: 80px;
+        height: auto;
+
+    }
+
+}
+
+@media (max-width: 800px){
+    .header-tagline{
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
 }

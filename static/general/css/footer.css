@@ -30,7 +30,7 @@ footer h2{
 }
 footer .right{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 footer .media-sosial > div{
@@ -44,16 +44,73 @@ footer .media-sosial > div{
 
 footer p{
     font-style: normal;
-font-weight: normal;
-font-size: 24px;
-line-height: 40px;
-/* identical to box height */
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 40px;
+    /* identical to box height */
 
 
-color: #646464;
+    color: #646464;
 }
 
 footer .right > div{
     padding: 0 10px;
     width: 40%;
+}
+
+@media(max-width: 1000px){
+    footer{
+        width: 100%;
+        padding-left: 80px;
+        padding-right: 80px;
+        height: auto;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        
+    }
+    footer p{
+        font-size: 18px;
+        line-height: 35px;
+    }
+    .footer-logo{
+        Width : 200px;
+        Height :180px;
+    }
+    
+    .media-sosial img {
+        height: 28px;
+        padding-right: 15px;
+    }
+    .footer h2{
+        font-size: 18px;
+        line-height: 30px;
+    }
+}
+
+
+@media(max-width: 800px){
+    footer{
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        
+    }
+    footer p{
+        font-size: 16px;
+        line-height: 35px;
+    }
+    .footer-logo{
+        Width : 180px;
+        Height :150px;
+    }
+    
+    .media-sosial img {
+        height: 20px;
+        padding-right: 10px;
+    }
+    .footer h2{
+        font-size: 18px;
+        line-height: 30px;
+    }
 }

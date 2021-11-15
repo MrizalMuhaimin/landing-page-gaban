@@ -1,0 +1,241 @@
+.dashboard{
+    width: 100%;
+    height: 100vh;
+    display:flex;
+}
+.dashboard-navbar{
+    width: 15%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #E6FEFE;
+    padding: 34px 50px 0 20px;
+}
+.dashboard-main{
+    width: 85%;
+    padding:0 60px 10px 20px;
+}
+
+.dashboard-navbar div{
+    display: flex;
+    width: 100%;
+    margin: 10px 0;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    
+}
+
+.dashboard-navbar i{
+    padding-right: 10px;
+}
+
+.dashboard-navbar h2{
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 30px;
+    /* identical to box height */
+    
+    color: #494B4D;
+}
+.dashboard-navbar>h2{
+    font-weight: bold;
+    font-size: 18px;
+    margin: 0 0 20px 0;
+    color: #1A8685;
+}
+.dashboard-navbar img {
+    max-width: 40px;
+    margin: 10px 0;
+}
+
+.dashboard-menu:hover{
+    background: #20abab8e;
+    border-radius: 10px;
+    color: white;
+}
+.dashboard-menu:hover h2{
+    color: white;
+}
+
+.dashboard-klik, .dashboard-klik:hover{
+    background: #20ABAA;
+    border-radius: 10px;
+    color: white;
+    cursor: default;
+}
+
+.dashboard-klik h2{
+    color: white;
+}
+
+.dashboard-header{
+    width: 100%;
+    display: flex;
+    justify-content:flex-end;
+    padding: 20px 10px;
+    align-items: flex-end;
+
+}
+
+.header-left{
+    margin-right:auto;
+}
+
+.dashboard-header h3,.dashboard-header h2,.dashboard-header i{
+    color: #18807F;
+}
+
+.dashboard-header input{
+    padding: 6px 12px;
+    width: 257px;
+    height: 35px;
+    background: #F5F6F6;
+    box-shadow: inset 0px 0px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    border: none;
+    font-size: 14px;
+    line-height: 23px;
+
+    color: #A5AAAE;
+}
+.dashboard-header input:focus{
+    color: black;
+}
+
+.dashboard-header h2{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 47px;
+}
+
+.dashboard-header i{
+    font-size: 35px;
+}
+.dashboard-header >div{
+    padding-left: 15px ;
+    padding-right:15px;
+}
+.info-of-account{
+    display: flex;
+    align-items: center;
+}
+.nameofaccount{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 23px;
+    color: #18807F;
+}
+
+.roleofaccount{
+    font-weight: normal;
+    font-size: 11px;
+    line-height: 18px;
+    /* Dark Grey */
+    color: #494B4D;
+}
+.info-of-account i{
+    padding-right: 10px!important;
+    
+}
+
+.dashboard-header2{
+    padding: 20px 0;
+}
+.dashboard-header2 >h3{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 30px;
+    /* identical to box height */
+    /* Green */
+    color: #18807F;
+    margin-bottom: 20px;
+
+}
+
+.dashboard-header2 p{
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.dashboard-header2 > div {
+    display: flex;
+    width: 100%;
+}
+
+.dashboard-header2 > div > div >p{
+    padding-right: 10px;
+}
+
+.dashboard-header2 p{
+    text-align: center;
+    align-self: center;
+}
+.dashboard-header2 h4{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 27px;
+    /* identical to box height */
+    padding: 0 20px;
+    align-self: center;
+    color: #18807F;
+}
+
+.add-data{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    width: 105px;
+    height: 36px;
+    background: #7ACE46;
+    border-radius: 5px;
+    margin-right: 12px;
+    color:white;
+}
+
+.download-data{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    width: 134px;
+    height: 36px;
+
+    /* Light Grey */
+
+    background: #F5F6F6;
+    border-radius: 5px;
+    margin-right: auto;
+}
+
+.show-data{
+    display: flex;
+    align-self: center;
+}
+
+.add-minus-data{
+    display: flex;
+    justify-content:center;
+    padding: 6px 12px;
+    width: 63px;
+    height: 35px;
+
+    background: #F5F6F6;
+    box-shadow: inset 0px 0px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+}
+.add-minus-data div{
+    display: grid;
+    padding-left: 10px;
+
+}
+
+.add-minus-data i {
+    font-size: 10px;
+}
+
+
+

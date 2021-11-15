@@ -34,6 +34,8 @@
     height: 180px;
     border-radius:15px;
     margin-bottom:16px;
+    object-fit: cover;
+    margin-right: 10px;
 }
 
 .program h3{
@@ -57,4 +59,48 @@
     /* Dark Grey */
 
     color: #494B4D;
+}
+@media (max-width: 1000px) {
+    .program-gaban{
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+    .program img {
+        width: 249px;
+        height: 135px;
+        object-fit: cover;
+    }
+}
+
+@media (max-width: 800px){
+    .program-gaban{
+        
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    .program{
+        flex-direction: column;
+        justify-content: center;
+        text-align:center;
+
+    }
+    .program img {
+        
+        width: 349px;
+        height: 235px;
+        object-fit: cover;
+        
+    }
+    .program>div {
+        margin-bottom: 20px;
+        display:flex;
+    }
+    .program div p{
+        text-align: center;
+    }
+
+    .program h3{
+        font-size: 20px;
+    }
+   
 }

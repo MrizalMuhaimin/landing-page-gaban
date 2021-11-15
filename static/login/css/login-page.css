@@ -3,6 +3,8 @@
     height: 100vh;
 }
 .login-left {
+    position: relative;
+    z-index: -2;
     background-color: #E6FEFE;
     display: flex;
     justify-content:left;
@@ -12,6 +14,7 @@
 }
 .login-left img{
     position: relative;
+    z-index: -1;
     align-self: center;
     margin-top: auto;
     bottom: 0px;

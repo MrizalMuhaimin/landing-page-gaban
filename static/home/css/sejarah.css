@@ -31,7 +31,7 @@
     margin-left: 675px;
     margin-top: 140px;
     position: absolute;
-    width:45%;
+    width:40%;
 }
 
 .sejarah h2{
@@ -52,3 +52,39 @@
 
 }
 
+@media (max-width: 1000px){
+    .logo-sejarah{
+        margin-left: -50px;
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+    .logo img{
+        margin-top: 52px;
+        margin-left: 50px;
+        width: 380px;
+        height: auto;
+    }
+    .sejarah{
+        margin-left: 450px;
+        margin-top: 100px;
+    }
+}
+
+@media (max-width: 800px){
+    .logo-sejarah{
+        margin-left: -50px;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    .logo img{
+        margin-top: 100px;
+        margin-left: 50px;
+        width: 180px;
+        height: auto;
+    }
+    .sejarah{
+        width: 60%;
+        margin-left: 250px;
+        margin-top: 100px;
+    }
+}

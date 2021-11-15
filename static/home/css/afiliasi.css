@@ -59,3 +59,32 @@
 
     color: #494B4D;
 }
+
+@media(max-width: 1000px){
+    .afiliasi {
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+
+}
+
+@media (max-width: 800px){
+    .afiliasi {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    .logo-ukawangi{
+        width: 120px;
+        height: 140px;
+    }
+    
+    .logo-KPMBB{
+        height: 180px;
+        left: 500px;
+    }
+    
+    .logo-Tel-U{
+        width: 100px;
+        height: 100px;
+    }
+}

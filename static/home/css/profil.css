@@ -25,3 +25,30 @@
 
     color: #494B4D;
 }
+
+@media (max-width: 1000px) {
+    
+    .profil-vidio {
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+
+}
+
+@media (max-width: 800px){
+    .profil-vidio{
+        display: block;
+        text-align: center;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .profil-vidio iframe{
+        margin-bottom: 30px;
+    }
+    .profil-vidio p {
+        padding-left:0;
+        width: 100%;
+    }
+    
+}
