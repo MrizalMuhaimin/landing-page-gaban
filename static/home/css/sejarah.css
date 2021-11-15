@@ -123,9 +123,10 @@
         width: 100%;
         margin-left: 0;
         padding-left: 50px;
-        padding-right: 50px;
-
+        padding-right: 50px; 
+    }
+    .logo-sejarah ~ .garis-bawah {
+        padding-top:70px;
         
-    
     }
 }

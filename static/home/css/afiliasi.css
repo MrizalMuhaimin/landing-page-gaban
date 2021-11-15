@@ -24,7 +24,9 @@
 
 .logo-afiliasi > div{
     align-self: baseline;
+    text-align: center;
 }
+
 
 .logo-afiliasi img{
     margin-bottom: 20px;
@@ -38,7 +40,6 @@
 
 .logo-KPMBB{
     height: 203px;
-    left: 607px;
 
 }
 
@@ -80,7 +81,7 @@
     
     .logo-KPMBB{
         height: 180px;
-        left: 500px;
+        
     }
     
     .logo-Tel-U{
@@ -95,5 +96,27 @@
 @media (max-width:600px){
     .logo-afiliasi p {
         font-size: 18px;
+    }
+}
+
+@media (max-width:500px){
+    .logo-ukawangi{
+        width: 80px;
+        height: 100px;
+    }
+    
+    .logo-KPMBB{
+        height: 100px;
+        width:  auto;
+        text-align: center
+    }
+    
+    .logo-Tel-U{
+        width: 80px;
+        height: 80px;
+    }
+    .afiliasi p{
+        font-size: 16px;
+        line-height: 20px;
     }
 }

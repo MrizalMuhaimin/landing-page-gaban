@@ -132,3 +132,10 @@
         margin-right: 0px;
     }
 }
+
+@media (max-width: 500px){
+    .program-gaban{
+        margin-top: 50px ;
+        margin-bottom: 10px;
+    }
+}

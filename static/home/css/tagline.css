@@ -116,3 +116,26 @@
         width: 200px;
     }
 }
+
+@media (max-width:500px){
+    .tagline{
+        height: auto;
+    }
+    .tagline-text > p{
+        left: 50px;
+        font-size: 30px;
+        line-height: 35px;
+    }
+    .tagline img{
+        width: 150px;
+    }
+
+    .title-foto h3{
+        font-size: 16px;
+        line-height: 10px;
+    }
+    .title-foto p{
+        font-size: 12px;
+    }
+
+}
