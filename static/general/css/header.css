@@ -41,3 +41,15 @@
     font-size: 18px
 }
 
+
+@media (max-width: 400px){
+    .header p{
+        font-weight: 500;
+        font-size: 14px
+    }
+    .header-tagline {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+}

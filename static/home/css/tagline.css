@@ -137,5 +137,21 @@
     .title-foto p{
         font-size: 12px;
     }
+}
+
+@media (max-width: 400px){
+
+    .title-foto div{
+        margin-bottom: 20px;
+    }
+
+    .tagline-text > p{
+        top:60px;
+        font-size: 20px;
+        line-height: 25px;
+    }
+    .tagline img{
+        width: 100px;
+    }
 
 }

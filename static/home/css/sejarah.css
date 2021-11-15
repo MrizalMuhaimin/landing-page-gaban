@@ -130,3 +130,20 @@
         
     }
 }
+
+@media (max-width:400px){
+    .logo{
+        right: 70px;
+
+    }
+    .sejarah{
+        padding-left: 20px;
+        padding-right: 20px; 
+    }
+
+    .sejarah p{
+        font-size: 16px;
+    }
+
+    
+}
