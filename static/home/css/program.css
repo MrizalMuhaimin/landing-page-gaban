@@ -123,8 +123,12 @@
         flex-direction: column;
         align-items: center;
     }
+    .program {
+        text-align: center;
+    }
     .program img {
         width: 100%;
         height: min-content;
+        margin-right: 0px;
     }
 }
