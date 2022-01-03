@@ -1,4 +1,4 @@
-footer{
+.footer{
     display: flex;
     height: 409px;
     /* transform: matrix(-1, 0, 0, 1, 0, 0); */
@@ -7,14 +7,18 @@ footer{
     align-items: center;
 }
 
-footer{
+.footer{
     width: 100%;
     padding-left: 149px;
     padding-right: 149px;
     
 }
 
-footer h2{
+.footer .right .menu>p, .footer .right .menu div {
+    cursor: pointer;
+}
+
+.footer h2{
     font-style: normal;
     font-weight: 800;
     font-size: 24px;
@@ -28,12 +32,12 @@ footer h2{
     Width : 220px;
     Height : 200px;
 }
-footer .right{
+.footer .right{
     display: flex;
     justify-content: space-around;
 }
 
-footer .media-sosial > div{
+.footer .media-sosial > div{
     display: flex;
 }
 
@@ -42,7 +46,7 @@ footer .media-sosial > div{
     padding-right: 15px;
 }
 
-footer p{
+.footer p{
     font-style: normal;
     font-weight: normal;
     font-size: 24px;
@@ -53,13 +57,13 @@ footer p{
     color: #646464;
 }
 
-footer .right > div{
+.footer .right > div{
     padding: 0 10px;
     width: 40%;
 }
 
 @media(max-width: 1000px){
-    footer{
+    .footer{
         width: 100%;
         padding-left: 80px;
         padding-right: 80px;
@@ -68,7 +72,7 @@ footer .right > div{
         padding-bottom: 20px;
         
     }
-    footer p{
+    .footer p{
         font-size: 18px;
         line-height: 35px;
     }
@@ -89,14 +93,14 @@ footer .right > div{
 
 
 @media(max-width: 800px){
-    footer{
+    .footer{
         padding-left: 50px;
         padding-right: 50px;
         padding-top: 20px;
         padding-bottom: 20px;
         
     }
-    footer p{
+    .footer p{
         font-size: 16px;
         line-height: 35px;
     }
@@ -109,15 +113,15 @@ footer .right > div{
         height: 20px;
         padding-right: 10px;
     }
-    footer .right > div{
+    .footer .right > div{
         max-width: 45%;
     }
-    footer .right .menu {
+    .footer .right .menu {
         max-width: 30%;
     }   
 }
 @media(max-width: 700px){
-    footer p{
+    .footer p{
         font-size: 14px;
         line-height: 35px;
     }
@@ -127,15 +131,15 @@ footer .right > div{
     }
 }
 @media (max-width: 650px){
-    footer{
+    .footer{
         display: block;
     }
-    footer .left{
+    .footer .left{
         width: 100%;
         display: flex;
         justify-content: space-between;
     }
-    footer .right{
+    .footer .right{
         justify-content:space-between;
         margin-top: 30px;
     }
@@ -148,25 +152,26 @@ footer .right > div{
         padding-left: 10px;
         padding-right: 10px;
     }
-    footer .right > div{
+    .footer .right > div{
         min-width: 60%;
     }
-    footer .right .menu {
+    .footer .right .menu {
         min-width: 35%;
     }
 }
 
 @media (max-width: 400px){
-    footer h2 {
+    .footer h2 {
         font-size: 18px;
     }
 
-    footer p{
+    .footer p{
         font-size: 12px;
         line-height: 20px;
     }
-    footer{
+    .footer{
         padding-left: 20px;
         padding-right: 20px;
     }
+    
 }

@@ -1,0 +1,254 @@
+{% load static %}
+<h3>Data Anggota KPMBB</h3>
+<div>
+    <div class="add-data">
+        <p>Add Data</p>
+    </div>
+    <div class="download-data"> 
+        <p>Download Data</p>
+        <i class="fas fa-chevron-down"></i>
+    </div>
+    <div class="show-data"> 
+        <h4>Show</h4>
+        <form method="post">
+            {% csrf_token %}
+            <input type="hidden" id="Search"  name="Search" value="{{findData}}" />
+            <input type="number" id="coutdata" min="1" max="{{maxdata}}" name="coutdata" value="{{count}}" />
+            {% comment %} <p>{{count}}</p> {% endcomment %}
+            {% comment %} <div>
+                <i class="fas fa-chevron-up"></i>
+                <i class="fas fa-chevron-down"></i>
+            </div> {% endcomment %}
+        </form>
+        <h4>entries </h4>
+    </div>
+</div>
+
+
+<div class="dashboard-utama">
+    <div id="modal-succes" class="modal modal-alert modal-succes">
+        <div class="modal-atas">
+            <div class="modal-header modal-info">
+                <i class="far fa-times-circle closebtn" onClick={closeModal}></i>
+            </div>
+            <i class="far fa-check-circle"></i>
+        </div>
+        <div class="modal-bawah">
+            <h3>Success !</h3>
+            <p id="message-success">Your data has been added successfully</p>
+            <button class="alert-btn closebtn">OK</button>
+        </div>
+    </div>
+    <div   id="modal-fail" class="modal modal-alert modal-fail">
+        <div class="modal-atas">
+            <div class="modal-header modal-info">
+                <i class="far fa-times-circle closebtn" ></i>
+            </div>
+            <i class="fas fa-times"></i>
+        </div>
+        <div class="modal-bawah">
+            <h3>Fail !</h3>
+            <p id="message-fail">Your data was not successfully added</p>
+            <button class="alert-btn closebtn">OK</button>
+        </div>
+    </div>
+    <div   id="modal-delete" class="modal modal-alert delete">
+        <div class="modal-atas">
+            <div class="modal-header modal-info">
+                <i class="far fa-times-circle closebtn" ></i>
+            </div>
+            <h3>Confirmation</h3>
+        </div>
+        <div class="garis-bawah"></div>
+        <div class="modal-bawah">
+            
+           
+            <p>Are you sure to delete this data?</p>
+            <div class="garis-bawah"></div>
+            <div class="submit-from">
+                <div>
+                    <div class="dashboard-menu delete show">
+                        Delete
+                    </div>
+                </div>
+                <div>
+                    <div class="dashboard-menu close closebtn">
+                        Close
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="id-back-modal-dashboard" class="back-modal "></div>
+    <div id="id-modal-dashboard" class="modal">
+        <div  class="modal-header">
+            <h2>Tambahkan Data Anggota</h2>
+            <i class="far fa-times-circle closebtn"></i>
+        </div>
+        <div class="garis-bawah"></div>
+        <div class="input-data">
+            <form class="form-post-put" method="post" >
+                {% csrf_token %}
+                <div>
+                    {{allFormField.nama_field.label_tag}}
+                    {{allFormField.nama_field}}
+                    {{allFormField.prov_field.label_tag}}
+                    {{allFormField.prov_field}}
+                    {{allFormField.kab_field.label_tag}}
+                    {{allFormField.kab_field}}
+                    {{allFormField.kec_field.label_tag}}
+                    {{allFormField.kec_field}}
+                    {{allFormField.des_field.label_tag}}
+                    {{allFormField.des_field}}
+                    {{allFormField.alamat_field.label_tag}}
+                    {{allFormField.alamat_field}} 
+        
+                </div>
+                <div>
+                     {{allFormField.almamater_field.label_tag}}
+                    {{allFormField.almamater_field}}
+                    {{allFormField.jurusan_field.label_tag}}
+                    {{allFormField.jurusan_field}}
+                    {{allFormField.angkatan_field.label_tag}}
+                    {{allFormField.angkatan_field}}
+                    {{allFormField.email_field.label_tag}}
+                    {{allFormField.email_field}}
+                    {{allFormField.nomerTel_field.label_tag}}
+                    {{allFormField.nomerTel_field}}
+                    {{allFormField.idline_field.label_tag}}
+                    {{allFormField.idline_field}} 
+                    
+                </div>
+                <div>
+                    {{allFormField.inKerja_field.label_tag}}
+                    {{allFormField.inKerja_field}}
+                    {{allFormField.sektorKerja_field.label_tag}}
+                    {{allFormField.sektorKerja_field}}
+                    {{allFormField.sektorUsaha_field.label_tag}}
+                    {{allFormField.sektorUsaha_field}}
+                    <label>Preferensi pengontakan </label>
+                    <div>
+                        <label class="container-chekbox" for="keeplogin">Telfon/sms
+                            {{allFormField.isTelponSms_field}}
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <div>
+                        <label class="container-chekbox" for="keeplogin">Email
+                            {{allFormField.isEmail_field }}
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <div>
+                        <label class="container-chekbox" for="keeplogin">Whatsapp
+                            {{allFormField.isWa_field }}
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <div>
+                        <label class="container-chekbox" for="keeplogin">Line
+                            {{allFormField.isLine_field}}
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+        
+                    <div class="submit-from">
+                        <div>
+                           
+                            <div class="dashboard-menu update">
+                                Update
+                            </div>
+                        </div>
+                        <div>
+                           
+                            <div class="dashboard-menu simpan">
+                                Simpan
+                            </div>
+                        </div> 
+                        <div>
+                            <input type="hidden" id="spa" name="spa2"  value=1>
+                            <input type="hidden" id="notif" name="notif"  value="tambahkan">
+                            <button type="submit" class="dashboard-menu tambahkan">
+                                Tambahkan
+                            </button>
+                        </div>
+                        <div>
+                            <div class="dashboard-menu close closebtn">
+                                Close
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                </div>
+                
+            </form>
+        </div>
+        
+    
+    </div>
+    {% if count != 0 %}
+    
+    <table class="table-data-user">
+        <tr class="color-1">
+            <th>No</th>
+            <th>Nama</th>
+            <th>Almamater</th>
+            <th>Jurusan</th>
+            <th>Angkatan</th>
+            <th>Email</th>
+            <th>No. Telp</th>
+            <th class="action">Action</th>
+            
+
+        </tr>
+        {% else %}
+        <div class="data-not-found">
+            <img src="{% static 'general/assets/relaxed.png' %}">
+            <h2>Uppss..!   maaf data tidak ditemukan</h2>
+        </div>
+        {% endif %}
+
+
+        {% with counter=0 %}
+            {% for data in infoUser %}
+                {% if findData.lower in data.nama.lower or findData.lower in data.almamater.lower  or findData.lower in data.jurusan.lower or findData.lower in data.angkatan.lower or findData.lower in data.email.lower or findData.lower in data.nomerTel.lower or findData.lower in data.prov.lower or findData.lower in data.kab.lower or findData.lower in data.kec.lower or findData.lower in data.des.lower or findData.lower in data.alamat.lower or findData.lower in data.idline.lower or findData.lower in data.inKerja.lower  or findData.lower in data.sektorKerja.lower or findData.lower in data.sektorUsaha.lower  %}
+                    <tr class="data-user">
+                        <th class="nomer-user"> {{data.id}}</th>
+                        <th> {{data.nama}}</th>
+                        <th> {{data.almamater}}</th>
+                        <th> {{data.jurusan}}</th>
+                        <th> {{data.angkatan}}</th>
+                        <th> {{data.email}}</th>
+                        <th> {{data.nomerTel}}</th>
+                        <th class="icon-action action">
+                            <div>
+                                <div id={{data.id}}  onClick='const parsed  = JSON.stringify("kalakslnalsdjakdalid"+this.id+"idqwertyyuuina1"+this.id+this.id+"kskakhdiahdiahdii");localStorage.setItem("al5s6kdj7fhgmz1mxncbv2qpwo4eir6uty", parsed);document.dispatchEvent(new Event("viewdata"));document.querySelector("#id-back-modal-dashboard").classList.add("show");document.querySelector("#id-modal-dashboard").classList.add("show");document.querySelector(".update").classList.add("show");document.querySelector(".simpan").classList.remove("show");document.querySelector(".tambahkan").classList.remove("show");'>
+                                    <img src="{% static 'general/assets/icon-view.png' %}"> 
+                                </div>
+                                <div id={{data.id}}  onClick='const parsed  = JSON.stringify("kalakslnalsdjakdalid"+this.id+"idqwertyyuuina35181kakak"+this.id+this.id+"kskakhdiahdiahdii");localStorage.setItem("al5s6kdj7fhgmz1mxncbv2qpwo4eir6uty", parsed);document.dispatchEvent(new Event("editdata"));document.querySelector("#id-back-modal-dashboard").classList.add("show");document.querySelector("#id-modal-dashboard").classList.add("show");document.querySelector(".update").classList.remove("show");document.querySelector(".simpan").classList.add("show");document.querySelector(".tambahkan").classList.remove("show")'>
+                                    <img src="{% static 'general/assets/icon-edit.png' %}">
+                                </div>
+                                <div id={{data.id}}  onClick='const parsed  = JSON.stringify("kalakslnalsdjakdalid"+this.id+"idqwertyyuuina9"+this.id+this.id+"kskakhdiahdiahdii");localStorage.setItem("al5s6kdj7fhgmz1mxncbv2qpwo4eir6uty", parsed);document.dispatchEvent(new Event("delatedata"));document.querySelector(".delete").classList.add("show");document.querySelector("#id-back-modal-dashboard").classList.add("show");'>
+                                    <img src="{% static 'general/assets/icon-delete.png' %}">
+                                </div>
+                                <div>
+                                    <a href="https://api.whatsapp.com/send?text=Hello%20ini%20dari%20kpmbb&amp;phone=+62%20{{data.nomerTel}}" target="_blank">
+                                        <img src="{% static 'general/assets/icon-wa.png' %}">  
+                                    </a>
+                                </div>
+                            </div>
+                        </th>
+
+                    </tr>
+                    
+                {% endif %}
+
+            {% endfor %}
+
+        {% endwith %}
+        
+        
+
+    </table>
+</div>

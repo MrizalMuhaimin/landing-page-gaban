@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-)-to$v!aus!o5*!$qmf^(6tiv(k(^tm0x(94q(@kxnamz=2=oe
 DEBUG = True
 
 ALLOWED_HOSTS = ['landing-page-kpmbb.herokuapp.com']
-# ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -38,10 +38,12 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'livereload',
+    # 'livereload',
     'django.contrib.staticfiles',
     'login',
     'dashboard',
+    'rest_framework',
+
 ]
 
 MIDDLEWARE = [
@@ -52,8 +54,9 @@ MIDDLEWARE = [
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'livereload.middleware.LiveReloadScript',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware', 
+    # 'livereload.middleware.LiveReloadScript',
+    
     
 ]
 
@@ -127,11 +130,27 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-# STATICFILES_DIRS = [BASE_DIR / "static",]
+STATICFILES_DIRS = [BASE_DIR / "static",]
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# SESSION_COOKIE_AGE = 300 # 5 menute in seconds
+# SESSION_SERIALIZER = 'django.contrib.sessions.serializers.PickleSerializer'
+# AUTO_LOGOUT_DELAY = 1
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.BasicAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+    ],
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 10,
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticated',
+    ]
+}
+

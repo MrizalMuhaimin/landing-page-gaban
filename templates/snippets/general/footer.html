@@ -1,5 +1,5 @@
 {% load static %}
-<footer>
+<div class="footer">
     <div class="left">
         <img class="footer-logo" src="{% static 'general/assets/LogoGaban1.png' %}">
         <div class="media-sosial">
@@ -15,10 +15,18 @@
     <div class="right">
         <div class="menu">
             <h2>Menu</h2>
-            <p>Beranda</p>
-            <p>Program</p>
-            <p>Berita</p>
-            <p>Tentang Kami</p>
+            <p onclick='document.dispatchEvent(new Event("gotoHeader"))'>Beranda</p>
+            <div>
+                <div onclick='document.dispatchEvent(new Event("gotoProgram"))'>
+                    <p>Program</p>
+                </div>
+                <div onclick='document.dispatchEvent(new Event("gotoSponsor"))'>
+                    <p>Berita</p>
+                </div>
+                <div onclick='document.dispatchEvent(new Event("gotoFooter"))'>
+                    <p>Tentang Kami</p>
+                </div>
+            </div>
         </div>
         <div>
             <h2>Hubungi Kami</h2>
@@ -29,4 +37,7 @@
 
     </div>
 
+</div>
+<footer>
+    
 </footer>

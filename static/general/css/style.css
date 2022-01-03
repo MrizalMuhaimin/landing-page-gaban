@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Mukta&display=swap');
 
 
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -19,7 +20,8 @@
 }
 
 .garis-bawah{
-    border-bottom: 3px solid #F5F6F6;
+    border-bottom: 1px solid #dbdbdb;
+    
 }
 
 a{

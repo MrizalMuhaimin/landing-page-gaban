@@ -1,0 +1,89 @@
+<div class="input-data">
+    <h2>Tambahkan Data Anggota</h2>
+    <form method="post">
+        {% csrf_token %}
+        <div>
+            {{allFormField.nama_field.label_tag}}
+            {{allFormField.nama_field}}
+            {{allFormField.prov_field.label_tag}}
+            {{allFormField.prov_field}}
+            {{allFormField.kab_field.label_tag}}
+            {{allFormField.kab_field}}
+            {{allFormField.kec_field.label_tag}}
+            {{allFormField.kec_field}}
+            {{allFormField.des_field.label_tag}}
+            {{allFormField.des_field}}
+            {{allFormField.alamat_field.label_tag}}
+            {{allFormField.alamat_field}} 
+
+        </div>
+        <div>
+             {{allFormField.almamater_field.label_tag}}
+            {{allFormField.almamater_field}}
+            {{allFormField.jurusan_field.label_tag}}
+            {{allFormField.jurusan_field}}
+            {{allFormField.angkatan_field.label_tag}}
+            {{allFormField.angkatan_field}}
+            {{allFormField.email_field.label_tag}}
+            {{allFormField.email_field}}
+            {{allFormField.nomerTel_field.label_tag}}
+            {{allFormField.nomerTel_field}}
+            {{allFormField.idline_field.label_tag}}
+            {{allFormField.idline_field}} 
+            
+        </div>
+        <div>
+            {{allFormField.inKerja_field.label_tag}}
+            {{allFormField.inKerja_field}}
+            {{allFormField.sektorKerja_field.label_tag}}
+            {{allFormField.sektorKerja_field}}
+            {{allFormField.sektorUsaha_field.label_tag}}
+            {{allFormField.sektorUsaha_field}}
+            <label>Preferensi pengontakan </label>
+            <div>
+                <label class="container-chekbox" for="keeplogin">Telfon/sms
+                    {{allFormField.isTelponSms_field}}
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+            <div>
+                <label class="container-chekbox" for="keeplogin">Email
+                    {{allFormField.isEmail_field }}
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+            <div>
+                <label class="container-chekbox" for="keeplogin">Whatsapp
+                    {{allFormField.isWa_field }}
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+            <div>
+                <label class="container-chekbox" for="keeplogin">Line
+                    {{allFormField.isLine_field}}
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+
+            <div class="submit-from"> 
+                <div>
+                    <input type="hidden" id="spa" name="spa2"  value=2>
+                    <input type="hidden" id="notif" name="notif"  value="tambahkan">
+                    <button type="submit" class="dashboard-menu">
+                        Save and add another 
+                    </button>
+                </div>
+                <div>
+                    <input type="hidden" id="spa" name="spa2"  value=1>
+                    <input type="hidden" id="notif" name="notif"  value="tambahkan">
+                    <button type="submit" class="dashboard-menu save">
+                        Save
+                    </button>
+                </div>
+            </div>
+            
+        </div>
+        </div>
+        
+    </form>
+</div>

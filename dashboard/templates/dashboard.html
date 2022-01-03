@@ -5,11 +5,14 @@
 {% endblock title %}
 {% block head %}
     {% comment %} GENERAL CSS {% endcomment %}
-    
+    <link rel="stylesheet" href="{% static "general/css/chekbox.css" %}">
+    <link rel="stylesheet" href="{% static "dashboard/css/modal.css" %}">
     
     {% comment %} PAGE CSS {% endcomment %}
     <link rel="stylesheet" href="{% static "dashboard/css/dashboard-page.css" %}">
     
+    
+   
     
 {% endblock head%}
 {% block contenUtama %}
@@ -21,7 +24,106 @@
     <script src="{% static "js/dom_alpa.js" %}" type="text/javascript"></script>
 {% endblock dom_umum %} {% endcomment %}
 {% block script %}
+    {% if notif == "tambahkan"%}
+        <script>
+        var backModal = document.getElementById("id-back-modal-dashboard");
+            
+        const succesEventTambahkan =(Massage = "Your data has been added successfully")=>{
+            const infoSuccess = document.querySelector("#modal-succes");
+            const textSuccess = document.querySelector("#message-success");
+            textSuccess.innerHTML = Massage;
+            infoSuccess.classList.add('show');
+            backModal.classList.add('show');
+        }
+        succesEventTambahkan()
+        </script>
+    {% endif %}
+
+    <script>
+      
+        if(document.getElementsByClassName("dashboard-menu")!== undefined){
+            var spa = {{spa}};
+            var menu = document.getElementsByClassName("dashboard-menu");
+            for (var i = 0; i < spa ; i++) {
+                if(i+1 == spa) {
+                    menu[i].classList.add("dashboard-klik")
+                }else{
+                    menu[i].classList.remove("dashboard-klik")
+                }
+            }
+        }
+    </script>
+
+    {% if spa == 1 %}
+    <script>  
+        
+        var backModal = document.getElementById("id-back-modal-dashboard");
+        var modalDashboard = document.getElementById("id-modal-dashboard")
+        backModal.onclick = function(){
+            backModal.classList.remove("show");
+            modalDashboard.classList.remove("show");
+            infoSuccess.classList.remove("show");
+            infoFail.classList.remove("show");
+            deletemodal.classList.remove("show");
+        }
+
+        var closebtn = document.getElementsByClassName("closebtn");
+        const infoSuccess = document.querySelector("#modal-succes");
+        const infoFail = document.querySelector("#modal-fail");
+        const deletemodal = document.querySelector("#modal-delete");
+
+        for(let x of closebtn){
+            x.onclick = function(){
+                backModal.classList.remove("show");
+                modalDashboard.classList.remove("show");
+                infoSuccess.classList.remove("show");
+                infoFail.classList.remove("show");
+                deletemodal.classList.remove("show");
+
     
+            }
+
+        }
+
+
+
+        var nomorUser = document.getElementsByClassName("nomer-user");
+        for (var i = 0; i < nomorUser.length; i++){
+            nomorUser[i].innerHTML = i+ 1;
+        }
+        var dataUser = document.getElementsByClassName("data-user");
+        var count = {{count}};
+        var max = {{maxdata}};
+    
+        for (var i = 0; i < max ; i++) {
+            if( i < count ) {
+                dataUser[i].classList.remove("hidden");
+            }else {
+                dataUser[i].classList.add("hidden");
+            }
+        }
+    
+        document.getElementById("coutdata").addEventListener("input", function(){
+            const nShow = document.getElementById("coutdata").value;
+            for (var i = 0; i < max ; i++) {
+                if( i < nShow ) {
+                    dataUser[i].classList.remove("hidden");
+                }else {
+                    dataUser[i].classList.add("hidden");
+                }
+            
+            }
+
+        })
+    </script>
+    <script src="{% static "dashboard/js/dataKab.js" %}" type="text/javascript" charset="utf-8"></script>
+    <script src="{% static "dashboard/js/fatch.js" %}" type="text/javascript" charset="utf-8"></script>
+  
+    {% elif spa == 2 %}
+    <script src="{% static "dashboard/js/dataKab.js" %}" type="text/javascript" charset="utf-8"></script>
+ 
+    {% endif %}
+        
 
 {% endblock script %}
 

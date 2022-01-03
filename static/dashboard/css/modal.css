@@ -1,0 +1,459 @@
+form.dash-menu>input[type="number"]{
+    display:none!important;
+}
+
+form.dash-menu{
+    padding: 0 !important;
+}
+
+button.dashboard-menu{
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.dash-menu button.dashboard-klik{
+    background: #20ABAA;
+
+}
+
+
+
+/* .dash-menu button.dashboard-klik{
+    background: #18807F;
+
+} */
+
+.dash-menu button{
+    outline: none;
+    border: none;
+    width: 100%;
+    margin: 10px 0;
+    align-items: center;
+    text-align: left;
+    padding: 10px;
+    cursor: pointer;
+    background:transparent;
+}
+.dashboard-utama{
+    margin-top: 25px;
+    width: 100%;
+}
+.icon-action div{
+    display: flex;
+    justify-content:space-around;
+}
+.icon-action img{
+    width: 30px;
+    
+    cursor: pointer;
+}
+.data-resep{
+    cursor: pointer;
+}
+
+table, th, td {
+    border:2px solid #FDE8B1;
+    border-collapse: collapse;
+    padding:8px;
+    font-weight: normal;
+
+  }
+table{
+    width:100%;
+}
+
+td{
+    height: 60px;
+    text-align: center;
+
+}
+.isi-tabel{
+    width: 100%;
+}
+
+.color-1{
+    background-color:#E6FEFE;
+    color: #18807F;
+}
+
+.color-1 th{
+    font-weight: bold;
+}
+
+.color-2{
+    background-color:#3A7C05;
+}
+
+#add_ingredients_details input{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.add-minus-data>input[type="number"]{
+    border:none ;
+    width: 50px ;
+    background: #F5F6F6 ;
+    border-radius: 5px ;
+    text-align: center ;
+    outline: none;
+
+
+}
+
+.add-minus-resep{
+    display: flex;
+    justify-content: flex-end
+}
+
+.add-minus-resep i{
+    color:#18807F;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.add-minus-resep i:hover{
+    color:#1470e9;
+    cursor: pointer;
+}
+
+.action{
+    width: 20%;
+}
+
+td.status-acc{
+    color: #118db3 ;
+    font-weight: bold;
+    font-size:16px;
+}
+
+td.status-decline{
+    color: rgb(214, 37, 37) ;
+    font-weight: bold;
+    font-size:16px;
+}
+
+.lihat-detail{
+    display: flex;
+    width: 100%;
+    color: white;
+    text-align: center;
+    margin: auto;
+}
+
+.lihat-detail div{
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: auto;
+    width: 50%;
+    background:#7ACE46;
+    padding:5px;
+    border-radius: 10px;
+}
+
+.lihat-detail div:hover{
+    background:#3A7C05;
+}
+
+.lihat-detail i{
+    padding-right: 10px
+}
+
+.detail-request div {
+    width: 30%!important;
+    
+}
+
+.acc-request{
+    background: #34B4DC!important;
+
+}
+.acc-request:hover{
+    background: #118db3!important;
+
+}
+.dis-request{
+    background: #c5c5c5!important;
+    color: #494B4D;
+
+}
+.dis-request:hover{
+    background: rgb(214, 37, 37)!important;
+    color: white;
+
+}
+
+.modal-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #18807F;
+    padding-left: 45px;
+    padding-right: 10px;
+}
+
+.back-modal{ 
+    display: none;
+    position :absolute;
+    top: 0;
+    left: 0%;
+    z-index: 2;
+    width : 100%;
+    height: 100%;
+    background-color:#5f5f5f62;
+}
+
+.back-modal.show{
+    display: block;
+    transition: all 0.15s;
+}
+
+.modal{
+    display:none;
+    transition: .10s ease;
+    position: absolute;
+    background-color:white;
+    left: 10%;
+    top: 15%;
+    vertical-align: middle;
+    width: 80%;
+    z-index: 3;
+
+   
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 20px 30px;
+    border-radius: 10px;
+}
+
+.modal p{
+    font-style: normal!important;
+font-weight: normal!important;
+font-size: 14px!important;
+line-height: 23px!important;
+
+/* Dark Grey */
+
+color: #494B4D!important;
+}
+
+.modal h3{
+    font-family: Mukta;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 40px;
+    /* identical to box height */
+
+
+    /* Green */
+
+    color: #18807F;
+}
+
+.modal button{
+    background: #FDE8B1;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+.modal.show{
+    display: block !important;
+    transition: all 0.15s;
+}
+
+.modal.modal-alert{
+    padding: 0px !important;
+    left:30%;
+}
+
+
+.modal-alert {
+    width: 40%;
+    border-radius:10px;
+    box-shadow: 0px 5px 8px 10px rgba(145, 143, 143, 0.25);
+}
+
+.modal-atas{
+    text-align: center;
+    background-color:  #18807F;
+    padding: 10px 10px;
+    border-radius: 10px 10px 0 0;
+}
+.modal-bawah{
+    text-align: center;
+    background-color: white;
+    padding: 10px 10px;
+    border-radius: 0 0 10px 10px;
+}
+.modal-info{
+    justify-content: flex-end!important;
+    line-height: 23px;
+}
+.modal.delete .modal-info i{
+    color: #18807F;
+
+}
+
+.modal.delete .modal-atas{
+    background: white;
+    text-align: left;
+    margin-left: 15px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+
+}
+
+.modal.delete .modal-bawah p{
+   
+    text-align: left;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px!important;
+    line-height: 30px!important;
+    margin-left: 15px!important;
+    margin-top:  15px!important;
+    margin-bottom: 15px!important;
+   
+    
+
+}
+.modal-info i{
+    color: white;
+}
+.modal-info ~ i {
+    font-size: 60px;
+    color: #FDE8B1;
+    
+}
+
+.modal-fail .modal-atas{
+    background-color:  #E060447F;
+}
+.modal-fail .modal-info ~ i {
+    color: rgb(214, 37, 37);
+}
+
+.alert-btn{
+    cursor: pointer;
+    margin-top: 20px;
+    padding: 8px 20px;
+    width: 105px;
+    height: 36px;
+    background-color: #FDE8B1;
+    border-radius: 10px;
+    border:none;
+}
+.alert-btn:hover{
+    background-color: #f5b81f;
+}
+
+.modal-header i {
+    font-size:22px;
+}
+
+
+.modal form{
+    padding-left: 45px;
+    padding-right: 10px;
+
+}
+form label, form input{
+    display:block;
+    margin-top: 5px;
+    margin-bottom:5px;
+}
+form label{
+    font-size: 14px;
+    font-weight: 600;
+    color: #18807F;
+}
+
+.modal form input[type="text"], form input[type="number"]{
+    font-size:14px;
+    height: 35px;
+    border-radius: 5px;
+    background-color: #F5F6F6;
+    padding: 6px 12px;
+    margin-bottom: 15px !important;
+    width: 100%;
+}
+.modal form .submit-button{
+    
+    display: flex;
+    justify-content: flex-end;
+}
+
+form input[type="submit"]{
+    display:none;
+    cursor: pointer;
+    color: white;
+    align-items: center;
+    padding: 5px 10px;
+    width: 105px;
+    height: 36px;
+    background: #7ACE46;
+    border-radius: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+    border: none;
+
+
+}
+
+form input[type="submit"].show{
+    display: block;
+
+}
+
+form input[type="submit"].save, form input[type="submit"].receive{
+   
+    background: #34B4DC;
+
+}
+form input[type="submit"].save:hover, form input[type="submit"].receive:hover{
+    background: #118db3;
+
+}
+
+form input[type="submit"].cancel, form input[type="submit"].reject{
+    background: #c5c5c5;
+    color: #494B4D;
+
+}
+
+form input[type="submit"].cancel:hover, form input[type="submit"].reject:hover{
+    background: rgb(214, 37, 37);
+    color: white;
+
+}
+form #add_ingredients_details >div> div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+
+form #ingredients_details div,form #add_ingredients_details div{
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+form #ingredients_details div label, form #add_ingredients_details div label{
+    width: 10%;
+
+}
+form #ingredients_details div input, form #add_ingredients div input{
+    width: 80%;
+
+}
+.closebtn:hover{
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover{
+    background-color:#3A7C05;
+}

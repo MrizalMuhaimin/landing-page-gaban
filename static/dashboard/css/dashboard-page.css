@@ -1,16 +1,54 @@
 .dashboard{
     width: 100%;
-    height: 100vh;
+    
     display:flex;
 }
+
+
+
+tr.data-user.hidden{ 
+    display: none !important;
+}
+.dashboard-menu{
+    display: flex;
+    width: 100%;
+    margin: 10px 0;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.data-not-found{
+    width: 100%;
+    text-align: center;
+    flex-direction: column;
+    
+}
+
+.data-not-found img{
+    width: 30%;
+    margin-right: auto;
+    margin-left: auto;
+}
+.data-not-found h2{
+    font-weight: bold;
+    font-size: 18px;
+    margin: 0 0 20px 0;
+    color: #1A8685;
+    text-align: center;
+}
+
 .dashboard-navbar{
     width: 15%;
-    height: 100%;
+    /* height: 100%; */
     display: flex;
     flex-direction: column;
     background-color: #E6FEFE;
     padding: 34px 50px 0 20px;
+    min-height: 100vh;
 }
+
+
 .dashboard-main{
     width: 85%;
     padding:0 60px 10px 20px;
@@ -30,13 +68,18 @@
     padding-right: 10px;
 }
 
-.dashboard-navbar h2{
+
+button.dashboard-menu.dashboard-klik {
+    cursor: pointer;
+}
+
+.dashboard-navbar button,.dashboard-navbar h2 {
     font-weight: bold;
     font-size: 16px;
     line-height: 30px;
     /* identical to box height */
-    
     color: #494B4D;
+    cursor: pointer;
 }
 .dashboard-navbar>h2{
     font-weight: bold;
@@ -54,19 +97,14 @@
     border-radius: 10px;
     color: white;
 }
-.dashboard-menu:hover h2{
+.dashboard-menu:hover{
     color: white;
 }
 
 .dashboard-klik, .dashboard-klik:hover{
     background: #20ABAA;
     border-radius: 10px;
-    color: white;
-    cursor: default;
-}
-
-.dashboard-klik h2{
-    color: white;
+    color: white !important;
 }
 
 .dashboard-header{
@@ -86,6 +124,37 @@
     color: #18807F;
 }
 
+.show-data form{
+    padding: 0px;
+}
+
+.show-data form input[type="number"]{
+    width: 55px;
+    outline: none;
+    border: none;
+    text-align: center;
+    
+}
+
+.dashboard-header form input {
+    padding: 6px 12px;
+    width: 257px;
+    height: 35px;
+    background: #F5F6F6;
+    box-shadow: inset 0px 0px 1px rgb(0 0 0 / 25%);
+    border-radius: 5px;
+    border: none;
+    font-size: 14px;
+    line-height: 23px;
+    color: #A5AAAE;
+    margin-bottom: 5px!important;
+}
+
+.dashboard-header form input:hover, .dashboard-header form input:focus {
+    outline: 2px solid #18807F; 
+    color: #18807F;  
+}
+
 .dashboard-header input{
     padding: 6px 12px;
     width: 257px;
@@ -96,7 +165,6 @@
     border: none;
     font-size: 14px;
     line-height: 23px;
-
     color: #A5AAAE;
 }
 .dashboard-header input:focus{
@@ -142,6 +210,94 @@
 
 .dashboard-header2{
     padding: 20px 0;
+}
+
+.dashboard-header2 .input-data{
+    display: block
+}
+
+.dashboard-header2 .input-data h2{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    /* identical to box height */
+    /* Green */
+    color: #18807F;
+    margin-bottom: 20px;
+}
+
+.dashboard-header2 .input-data form{
+    padding-left: 45px;
+    padding-right: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.dashboard-header2 .input-data form div{
+    width: 30%;
+
+}
+
+.dashboard-header2 .input-data form label, 
+.dashboard-header2 .input-data form input,
+.dashboard-header2 .input-data form select{
+    display:block;
+    margin-top: 5px;
+    margin-bottom:5px;
+}
+
+.dashboard-header2 .input-data form label.container-chekbox{
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 23px;
+
+    /* Dark Grey */
+
+    color: #494B4D;
+
+    
+}
+
+.dashboard-header2 .input-data form label{
+    font-size: 14px;
+    font-weight: 600;
+    color: #18807F;
+}
+.dashboard-header2 .input-data form textarea{
+    font-size:14px;
+    border-radius: 5px;
+    background-color: #F5F6F6;
+    padding: 6px 12px;
+    margin-bottom: 15px !important;
+    width: 100%;
+    border: none;
+    color: #18807F;
+    outline: none;
+    box-shadow: inset 0px 0px 2px rgba(0, 0, 0, 0.25);
+
+}
+
+.dashboard-header2 .input-data form input,.dashboard-header2 .input-data form select {
+    font-size:14px;
+    height: 35px;
+    border-radius: 5px;
+    background-color: #F5F6F6;
+    padding: 6px 12px;
+    margin-bottom: 10px !important;
+    width: 100%;
+    border: none;
+    color: #18807F;
+    outline: none;
+    box-shadow: inset 0px 0px 2px rgba(0, 0, 0, 0.25);
+}
+
+.dashboard-header2 .input-data form input:hover,
+.dashboard-header2 .input-data form input:focus, 
+.dashboard-header2 .input-data form select:focus,
+.dashboard-header2 .input-data form select:hover {
+    outline: 1px solid #18807F;
+
 }
 .dashboard-header2 >h3{
     font-style: normal;
@@ -195,6 +351,11 @@
     border-radius: 5px;
     margin-right: 12px;
     color:white;
+    cursor: pointer;
+}
+
+.add-data:hover{
+    background: #448a19;
 }
 
 .download-data{
@@ -216,6 +377,8 @@
     align-self: center;
 }
 
+
+
 .add-minus-data{
     display: flex;
     justify-content:center;
@@ -236,6 +399,163 @@
 .add-minus-data i {
     font-size: 10px;
 }
+
+.submit-from{
+    margin-top: 30px;
+    display: flex;
+    width: 100%!important;
+    justify-content: flex-end;
+}
+.submit-from div{
+    width: fit-content!important;
+    display: flex;
+    
+    
+}
+.submit-from div .show{
+    margin-left: 15px;
+    
+}
+.submit-from button[type="submit"]{
+    display:block;
+    cursor: pointer;
+    color: white;
+    align-items: center;
+    text-align: center;
+    padding: 8px 20px;
+    width: fit-content;
+    height: 36px;
+    background: #34B4DC;
+    border-radius: 5px;
+    margin-right: 0;
+    margin-left: 15px;
+    border: none;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+}
+
+
+.submit-from >div>div{
+    display:block;
+    cursor: pointer;
+    color: white;
+    align-items: center;
+    text-align: center;
+    padding: 8px 20px;
+    /* width: fit-content; */
+    width: 105px!important;
+    height: 36px;
+    background: #34B4DC;
+    border-radius: 5px!important;
+    margin-right: 0;
+    margin-left: 15px;
+    border: none;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+}
+
+.submit-from > div > div.simpan {
+    display: none;
+    margin-left: 15px;
+    transition-timing-function: ease-in;
+    
+}
+
+.submit-from > div > div.simpan.show {
+    display: block;
+    transition-timing-function: ease-out;
+}
+
+
+.submit-from button[type="submit"].save {
+    background:#7ACE46!important;
+    margin-left: 15px;
+}
+
+.submit-from button[type="submit"].save:hover {
+    background: #45831e!important;
+}
+.submit-from button[type="submit"]:hover{
+    background-color:#118db3;
+}
+
+.submit-from button[type="submit"].tambahkan {
+    background:#7ACE46!important;
+    margin-left: 15px;
+    display:none;
+}
+
+.submit-from  button[type="submit"].tambahkan.show {
+    display: block;
+}
+
+.submit-from  button[type="submit"].tambahkan:hover {
+    background: #45831e!important;
+}
+
+.submit-from div.close {
+    display:block;
+    cursor: pointer;
+    color: white;
+    align-items: center;
+    text-align: center;
+    padding: 8px 20px;
+    width: fit-content;
+    height: 36px;
+    border-radius: 5px;
+    margin-right: 0;
+    margin-left: 15px;
+    border: none;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+    background:#F5F6F6!important;
+    color: #494B4D!important;
+}
+
+.submit-from div.close:hover {
+    background: #d1d3d3!important;
+}
+
+.submit-from > div > div.update {
+    background:#DC8534!important;
+    display: none;
+    margin-left: 15px;
+}
+
+.submit-from > div > div.update.show {
+    display: block;
+    transition-timing-function: ease-out;
+}
+
+
+.submit-from > div > div.update:hover {
+    background: #a55407!important;
+    transition-timing-function: ease-in;
+}
+
+.submit-from > div > div.delete {
+    background:#E06044!important;
+    display: none;
+    margin-left: 15px;
+}
+
+.submit-from > div > div.delete.show {
+    display: block;
+    transition-timing-function: ease-out;
+}
+
+
+.submit-from > div > div.delete:hover {
+    background: #e03c17!important;
+    transition-timing-function: ease-in;
+}
+
 
 
 

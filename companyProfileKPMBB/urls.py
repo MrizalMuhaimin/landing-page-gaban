@@ -17,7 +17,14 @@ from django.contrib import admin
 from django.urls import path,include
 from . import views
 
+from rest_framework import routers
+from dashboard.viewset_ap import *
+
+router = routers.DefaultRouter()
+router.register('infoUser', userViewSetUser)
+
 urlpatterns = [
+    path('api/', include(router.urls)),
     path('admin/', admin.site.urls),
     path('', views.home),
     path('login/',include('login.urls')),
