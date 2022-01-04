@@ -599,7 +599,7 @@ const id_isEmail = document.getElementById("id_isEmail_field")
 const id_isLine = document.getElementById("id_isLine_field")
 
 
-const domain = "http://127.0.0.1:8000"
+const domain = "http://landing-page-kpmbb.herokuapp.com"
 
 const baseUrl = domain+"/api/infoUser";
 
