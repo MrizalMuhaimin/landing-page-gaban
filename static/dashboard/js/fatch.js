@@ -599,8 +599,12 @@ const id_isEmail = document.getElementById("id_isEmail_field")
 const id_isLine = document.getElementById("id_isLine_field")
 
 
+<<<<<<< HEAD
 const domain = "http://127.0.0.1:8000"
 // const domain = "https://gajahbanyuwangi.id"
+=======
+const domain = "http://landing-page-kpmbb.herokuapp.com"
+>>>>>>> 36d066c390fccee2fbf50d7ac44eeb2fc01f1fbf
 
 const baseUrl = domain+"/api/infoUser";
 
