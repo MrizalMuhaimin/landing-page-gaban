@@ -22,6 +22,8 @@ from dashboard.viewset_ap import *
 
 router = routers.DefaultRouter()
 router.register('infoUser', userViewSetUser)
+router.register('jurusan', jurusanView)
+router.register('kampus', kampusView)
 
 urlpatterns = [
     path('api/', include(router.urls)),

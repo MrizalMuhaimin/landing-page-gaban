@@ -26,6 +26,8 @@
 {% block script %}
     {% if notif == "tambahkan"%}
         <script>
+
+      
         var backModal = document.getElementById("id-back-modal-dashboard");
             
         const succesEventTambahkan =(Massage = "Your data has been added successfully")=>{
@@ -40,6 +42,19 @@
     {% endif %}
 
     <script>
+        var logoutAdmin = document.querySelector(".dropdown-admin")
+        logoutAdmin.onclick = function(){
+            console.log("coba")
+            if(document.querySelector(".info-admin.logout").classList.contains("show")){
+                document.querySelector(".info-admin.logout").classList.remove("show");
+                document.querySelector(".info-admin i").classList.remove("R-180");
+            }
+            else{
+                document.querySelector(".info-admin.logout").classList.add("show");
+                document.querySelector(".info-admin i").classList.add("R-180");
+
+            }
+        }
       
         if(document.getElementsByClassName("dashboard-menu")!== undefined){
             var spa = {{spa}};
@@ -118,9 +133,11 @@
     </script>
     <script src="{% static "dashboard/js/dataKab.js" %}" type="text/javascript" charset="utf-8"></script>
     <script src="{% static "dashboard/js/fatch.js" %}" type="text/javascript" charset="utf-8"></script>
+    <script src="{% static "dashboard/js/kampusJurusan.js" %}" type="text/javascript" charset="utf-8"></script>
   
     {% elif spa == 2 %}
     <script src="{% static "dashboard/js/dataKab.js" %}" type="text/javascript" charset="utf-8"></script>
+    <script src="{% static "dashboard/js/kampusJurusan.js" %}" type="text/javascript" charset="utf-8"></script>
  
     {% endif %}
         

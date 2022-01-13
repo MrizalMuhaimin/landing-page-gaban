@@ -1,15 +1,20 @@
+from django.contrib.auth import logout
 from django.shortcuts import render, redirect
 
 from .models import InfoUser
+
 from .forms import inputDataForm
 
+
 from .dataWilayah import dataWilayah
+
+def logoutUser(request):
+    logout(request)
+    return redirect('/login')
 
 
 def dashboard(request):
     infouser= InfoUser.objects.all()
-
-    
 
     context = {
        
@@ -102,8 +107,6 @@ def dashboard(request):
                     'notif':request.POST['notif'],
                 }
 
-
-
         except:
             try:
                 findData = str(request.POST['Search'])
@@ -156,7 +159,7 @@ def dashboard(request):
                         
                     }
                 except:
-                    print("dasboard")
+                   
                     
                     context = {
                     

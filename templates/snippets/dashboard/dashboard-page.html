@@ -36,20 +36,34 @@
                 <h3>Hi Admin</h3>
                 <h2>Welcome back!</h2>
             </div>
-
+            {% if spa == 1 %}
             <form method="post">
                 {% csrf_token %}
                 <input type="text" id="Search" name="Search" placeholder="Search data" value="{{findData}}">
                 
             </form>
+            {% endif %}
             <div>
                 <i class="fas fa-bell"></i>
             </div>
-            <div class="info-of-account">
+            <div class="foto-profile">
                 <i class="fas fa-user-circle"></i>
+            </div>
+            <div class="info-of-account">
+               
                 <div>
                     <p class="nameofaccount">{{user.username}}</p>
-                    <p class="roleofaccount">Admin</p>
+                    <div class="info-admin dropdown-admin">
+                        <p class="roleofaccount">Admin</p>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="info-admin logout">
+                        <a href="{% url 'logoutUser' %}">
+                            <p> LogOut</p>
+
+                        </a>
+                    </div>
+                    
                 </div>
             </div>
 

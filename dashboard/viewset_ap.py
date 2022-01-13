@@ -1,11 +1,21 @@
 from re import I
-from .models import InfoUser
-from .serializers import InfoUserSerializer
+from .models import InfoUser, Jurusan, Kampus
+from .serializers import InfoUserSerializer, InfoJurusanSerializer, InfoKampusSerializer
 from rest_framework import serializers, viewsets
 from rest_framework import permissions
 from rest_framework.views import APIView
 from rest_framework.response import Response
 
+
+class jurusanView(viewsets.ModelViewSet):
+    queryset = Jurusan.objects.all()
+    serializer_class = InfoJurusanSerializer
+    permission_classes =[permissions.IsAuthenticated]
+
+class kampusView(viewsets.ModelViewSet):
+    queryset = Kampus.objects.all()
+    serializer_class = InfoKampusSerializer
+    permission_classes =[permissions.IsAuthenticated]
 
 class userViewSetUser(viewsets.ModelViewSet):
     queryset = InfoUser.objects.all()

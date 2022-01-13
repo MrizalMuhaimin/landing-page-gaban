@@ -1,9 +1,58 @@
-.dashboard{
-    width: 100%;
-    
+.info-admin{
     display:flex;
-}
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
 
+ }
+
+ .foto-profile{
+     padding-right: 0px !important;
+ }
+
+ .info-admin i.R-180{
+    transition: all 0.5s ease;
+    transform: rotate(180deg);
+    
+ }
+
+.info-admin i{
+    font-size: 12px !important;
+    transition: all 0.5s ease;
+    transform: rotate(0deg);
+ }
+
+.info-admin.logout {
+    position: relative;
+    margin-bottom:-20px;
+    justify-content: flex-end !important;
+    display: none ;
+    transition: all 0.3s ease;
+    text-align:right;
+    padding-right:20px;
+    
+ }
+
+ .info-admin.logout.show {
+     display: flex;
+     transition: all 0.3s ease;
+
+ }
+
+
+.info-admin.logout p{
+    font-size: 12px !important;
+    color: red;
+    text-align: right;
+    
+ }
+
+.dashboard{
+    width: 100%;  
+    display:flex;
+   
+
+}
 
 
 tr.data-user.hidden{ 
@@ -38,9 +87,17 @@ tr.data-user.hidden{
     text-align: center;
 }
 
+
+
 .dashboard-navbar{
+    /* position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    height: 100%; */
+
+
     width: 15%;
-    /* height: 100%; */
     display: flex;
     flex-direction: column;
     background-color: #E6FEFE;
@@ -50,9 +107,20 @@ tr.data-user.hidden{
 
 
 .dashboard-main{
+    /* position: absolute;
+    top: 0;
+    right: 0; */
     width: 85%;
     padding:0 60px 10px 20px;
 }
+
+/* .dashboard-main>div{
+    width: 85%;
+    position: absolute;
+   
+    right: 0;
+
+} */
 
 .dashboard-navbar div{
     display: flex;
@@ -203,10 +271,10 @@ button.dashboard-menu.dashboard-klik {
     /* Dark Grey */
     color: #494B4D;
 }
-.info-of-account i{
+/* .info-of-account i{
     padding-right: 10px!important;
     
-}
+} */
 
 .dashboard-header2{
     padding: 20px 0;

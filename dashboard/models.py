@@ -48,7 +48,21 @@ class InfoUser(models.Model):
 
     def __str__(self):
         return "{}.{}".format(self.id,self.nama)
-    
+
+
+class Kampus(models.Model):
+  nama = models.CharField(max_length=255)
+
+  def __str__(self):
+        return "{}.{}".format(self.id,self.nama)
+
+
+class Jurusan(models.Model):
+  kampus = models.ForeignKey(Kampus,on_delete= models.CASCADE)
+  jurusan = models.CharField(max_length=255)
+
+  def __str__(self):
+        return "{}.{}".format(self.id,self.jurusan)
 
 
 

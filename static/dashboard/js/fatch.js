@@ -600,6 +600,7 @@ const id_isLine = document.getElementById("id_isLine_field")
 
 
 const domain = "http://127.0.0.1:8000"
+// const domain = "https://gajahbanyuwangi.id"
 
 const baseUrl = domain+"/api/infoUser";
 
@@ -651,7 +652,7 @@ const renderAll = (data) => {
         <th class="action">Action</th>
         </tr>`;
         var nomordata = 1;
-        data["results"].forEach(data => {
+        data.forEach(data => {
                 dataUser.innerHTML +=`<tr class="data-user">
                 <th class="nomer-user"> ${nomordata}</th>
                 <th> ${data.nama}</th>
@@ -684,8 +685,8 @@ const renderAll = (data) => {
         }
         );
         document.dispatchEvent(new Event("reloadnumbar"));
-        document.querySelector("#coutdata").setAttribute('max', data['count']);
-        document.querySelector("#coutdata").value = data['count'];
+        document.querySelector("#coutdata").setAttribute('max', data.length);
+        document.querySelector("#coutdata").value = data.length;
 
 
         
@@ -693,7 +694,7 @@ const renderAll = (data) => {
 
 const getDataInfoUserById = async (ID) => {
         try {
-            const response = await fetch(`${baseUrl}/${ID}/`);
+            const response = await fetch(`${baseUrl}/${ID}`);
             const responseJson = await response.json();
             // await overWrite(responseJson['prov'])
             if(responseJson.error) {
@@ -833,6 +834,7 @@ const renderToModal = (data) => {
     id_almamater.value = data["almamater"]
     id_jurusan.value = data["jurusan"]
     id_angkatan.value = data["angkatan"]
+    console.log( data["jurusan"])
     id_email.value = data["email"]
     id_nomor.value = data["nomerTel"]
     id_idLine.value = data["idline"]
@@ -953,13 +955,13 @@ addData[0].onclick = function(){
     backModal.classList.add("show");
     modalDashboard.classList.add("show");
     id_name.value = ""
-    id_prov.value = "Aceh"
-    id_kab.value="Kabupaten Aceh Barat"
+//     id_prov.value = "Aceh"
+//     id_kab.value="Kabupaten Aceh Barat"
     id_kec.value = ""
     id_des.value = ""
     id_alamat.value =""
-    id_almamater.value = ""
-    id_jurusan.value = ""
+//     id_almamater.value = "Institut Teknologi Bandung (ITB)"
+//     id_jurusan.value = "Meteorologi (ME)"
     id_angkatan.value = ""
     id_email.value = ""
     id_nomor.value = ""
@@ -1032,7 +1034,7 @@ document.querySelector(".simpan").onclick = function() {
         updateInfoUser(id[1],dataupdate);
         document.querySelector("#id-modal-dashboard").classList.remove("show");
         succesEvent("Your data has been successfully updated");
-        window.location()
+        // window.location()
         
 }
 

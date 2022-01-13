@@ -26,8 +26,8 @@ SECRET_KEY = 'django-insecure-)-to$v!aus!o5*!$qmf^(6tiv(k(^tm0x(94q(@kxnamz=2=oe
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['landing-page-kpmbb.herokuapp.com']
-# ALLOWED_HOSTS = ['*']
+# ALLOWED_HOSTS = ['landing-page-kpmbb.herokuapp.com']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -130,9 +130,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-# STATICFILES_DIRS = [BASE_DIR / "static",]
+STATICFILES_DIRS = [BASE_DIR / "static",]
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
@@ -148,7 +148,6 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.SessionAuthentication',
     ],
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
-    'PAGE_SIZE': 10,
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.IsAuthenticated',
     ]
