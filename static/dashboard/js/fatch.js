@@ -598,15 +598,74 @@ const id_isWa = document.getElementById("id_isWa_field")
 const id_isEmail = document.getElementById("id_isEmail_field")
 const id_isLine = document.getElementById("id_isLine_field")
 
-
-<<<<<<< HEAD
 const domain = "http://127.0.0.1:8000"
 // const domain = "https://gajahbanyuwangi.id"
-=======
-const domain = "http://landing-page-kpmbb.herokuapp.com"
->>>>>>> 36d066c390fccee2fbf50d7ac44eeb2fc01f1fbf
 
 const baseUrl = domain+"/api/infoUser";
+const baseUrlKampus2 = domain+"/api/kampus";
+const baseUrlJurusan2 = domain+"/api/jurusan";
+
+
+const getAllKampus2 = async () => {
+        try{
+    
+            const response = await fetch(`${baseUrlKampus2}`);
+            const responseJson = await response.json();
+           
+            if(responseJson.error) {
+                showResponseMessage(responseJson.message);
+            } else {
+                var id = getIDKampus2(responseJson)
+                getJurusanByIDKampus2(id)
+    
+            }
+    
+        } catch(error) {
+            // showResponseMessage(error)
+            showResponseMessage(error);
+        }
+    
+    }
+    
+    const getJurusanByIDKampus2 = async(idKampus) =>{
+        try{
+    
+            const response = await fetch(`${baseUrlJurusan2}`);
+            const responseJson = await response.json();
+           
+            if(responseJson.error) {
+                showResponseMessage(responseJson.message);
+            } else {
+                renderJurusan2(idKampus,responseJson)
+    
+            }
+    
+        } catch(error) {
+            // showResponseMessage(error)
+            showResponseMessage(error);
+        }
+    }
+    
+    function renderJurusan2(idkampus, responseJson) {
+        inputJurusan.innerText =""
+        for (datajurusan of responseJson){
+            if(datajurusan["kampus"]===idkampus){
+                var x = document.createElement("OPTION");
+                x.setAttribute("value", datajurusan["jurusan"]);
+                x.innerText = datajurusan["jurusan"];
+                inputJurusan.appendChild(x);
+            }
+        }
+    }
+    
+    function getIDKampus2(dataNamaKampus){
+        for(datakampus of dataNamaKampus){
+            if(datakampus.nama === document.getElementById("id_almamater_field").value ){
+                return datakampus.id
+            }
+        }
+    
+    }
 
 function getCookie(name) {
         let cookieValue = null;
@@ -838,6 +897,7 @@ const renderToModal = (data) => {
     id_almamater.value = data["almamater"]
     id_jurusan.value = data["jurusan"]
     id_angkatan.value = data["angkatan"]
+
     console.log( data["jurusan"])
     id_email.value = data["email"]
     id_nomor.value = data["nomerTel"]
@@ -891,22 +951,25 @@ function setkab(data){
 
 }
 
- async function loadDataFromStorage() {
+ async function loadDataFromStorage() {getAllKampus2;
     const serializedData /* string */ = localStorage.getItem("al5s6kdj7fhgmz1mxncbv2qpwo4eir6uty");
     
     let data = JSON.parse(serializedData);
+    getAllKampus2();
     let id = data.split('id');
+    getDataInfoUserById(id[1])
    
     
     backModal.classList.add("show");
     modalDashboard.classList.add("show");
     // getDataInfoUserProvKabById(id[1])
-    getDataInfoUserById(id[1])
+    
     
 }
 
 document.addEventListener("viewdata", () => {
     loadDataFromStorage();
+   
     id_name.setAttribute("disabled", "disabled");
     id_prov.setAttribute("disabled", "disabled");
     id_kab.setAttribute("disabled", "disabled");

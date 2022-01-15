@@ -1,5 +1,5 @@
-from django.contrib.auth import logout
 from django.shortcuts import render, redirect
+from django.contrib.auth import login, logout
 
 from .models import InfoUser
 
@@ -38,11 +38,13 @@ def dashboard(request):
             des_field = request.POST['des_field'].title()
             alamat_field = request.POST['alamat_field']
             almamater_field = request.POST['almamater_field']
-            jurusan_field = request.POST['jurusan_field'].title()
+            jurusan_field = request.POST['jurusan_field']
             angkatan_field = request.POST['angkatan_field']
             email_field = request.POST['email_field'].lower()
             nomerTel_field = request.POST['nomerTel_field']
             idline_field = request.POST['idline_field']
+            if(idline_field==""):
+                idline_field = "----"
             inKerja_field = request.POST['inKerja_field']
             sektorKerja_field = request.POST['sektorKerja_field'].title()
             sektorUsaha_field = request.POST['sektorUsaha_field'].title()
@@ -176,6 +178,9 @@ def dashboard(request):
     if not request.user.is_authenticated:
         print("User is not logged in :(")
         return redirect('/login')
+
+    request.session.set_expiry(900)
+    login(request, request.user)
 
     return render(request,"dashboard.html",context)
 

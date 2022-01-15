@@ -13,6 +13,7 @@ document.getElementById("id_almamater_field").addEventListener("change", functio
 })
 
 
+
 const getAllKampus = async () => {
     try{
 

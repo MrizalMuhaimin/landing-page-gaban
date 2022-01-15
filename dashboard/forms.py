@@ -1,6 +1,7 @@
 from typing import ValuesView
 from django import forms
 from django.forms.widgets import Widget
+import datetime
 
 from .dataWilayah import dataWilayah
 
@@ -112,7 +113,9 @@ class inputDataForm(forms.Form):
         attrs={
           'placeholder':'Masukkan Angkatan',
           'type': 'number',
-          'min':1914
+          'min':1914,
+          'max':datetime.date.today().year
+          
             }
         ),
         label="Angkatan ")
@@ -134,7 +137,8 @@ class inputDataForm(forms.Form):
         label="Nomor Telephone / WA ")
 
     idline_field = forms.CharField(
-        max_length=255, 
+        max_length=255,
+        required=False, 
         widget=forms.TextInput(
             attrs={
             'placeholder':'Masukkan ID Line',

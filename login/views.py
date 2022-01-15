@@ -24,6 +24,7 @@ def loginView(request):
 
     context = {
         'allFormField':LoginForm(),
+        
     }
 
     if request.user.is_authenticated:
@@ -35,12 +36,13 @@ def loginView(request):
         username_login = request.POST['email_field']
         password_login = request.POST['password_field']
         checklist_login = request.POST['check_field']
+        
 
         user = cekEmail.authenticate(request, username=username_login, password=password_login)
         print(user, checklist_login)
         
         if user is not None:
-            request.session.set_expiry(300)
+            request.session.set_expiry(900)
             login(request, user)
             
             return redirect('/dashboard')

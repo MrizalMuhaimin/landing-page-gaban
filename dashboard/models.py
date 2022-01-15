@@ -14,7 +14,7 @@ class InfoUser(models.Model):
     angkatan = models.CharField(max_length=4)
     email = models.EmailField(max_length=255)
     nomerTel = models.CharField(max_length=100)
-    idline = models.CharField(max_length=255)
+    idline = models.CharField(max_length=255, default="----")
     inKerja = models.CharField(max_length=255)
     sektorKerja = models.CharField(max_length=255)
     sektorUsaha = models.CharField(max_length=255)

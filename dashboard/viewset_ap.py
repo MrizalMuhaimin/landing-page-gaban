@@ -62,6 +62,10 @@ class userViewSetUser(viewsets.ModelViewSet):
             isLine = info_data["isLine"],
         )
 
+        if(new_info.isLine == ""):
+            new_info.isLine ="-----"
+
+
         new_info.save()
         serializer = InfoUserSerializer(new_info)
         return Response(serializer.data)
