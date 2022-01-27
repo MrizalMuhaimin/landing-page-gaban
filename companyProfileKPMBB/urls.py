@@ -29,6 +29,6 @@ urlpatterns = [
     path('api/', include(router.urls)),
     path('admin/', admin.site.urls),
     path('', views.home),
-    path('login/',include('login.urls')),
+    path('mlebu/',include('login.urls')),
     path('dashboard/',include('dashboard.urls')),
 ]

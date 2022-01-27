@@ -182,6 +182,14 @@ def dashboard(request):
     request.session.set_expiry(900)
     login(request, request.user)
 
+    # from .updateJurusan import updateJurusan, updateKampus
+    # resetDataKampus = False
+
+    # if(resetDataKampus):
+    #     updateKampus()
+    #     updateJurusan()
+    #     print("update")
+
     return render(request,"dashboard.html",context)
 
 

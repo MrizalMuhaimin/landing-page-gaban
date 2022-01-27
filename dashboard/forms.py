@@ -10,7 +10,8 @@ from .models import Kampus, Jurusan
 class inputDataForm(forms.Form):
     kampus = Kampus.objects.order_by('nama')
     jurusan = Jurusan.objects.all()
-    idKampusAwal = str(kampus[0])[0]
+    idKampusAwal = 0
+    # idKampusAwal = str(kampus[0])[0]
     
     newlist = []
     for data in kampus.values("nama"):
